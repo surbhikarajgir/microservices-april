@@ -1,0 +1,102 @@
+Docker:
+WORA
+PODA wherever you are deploying , they have to have docker egine in the system
+docker promises that your application should work completly fine in system  b  if 
+your app is working in system A
+
+with .jar .war.ear we give dependencies or libaries
++tomcat
+ we have created a package in which all softwares are there 
+we are providing whole enviorment
+we are going to create docker image for the package 
+the developer is going to put the docker image on central resgistry (docker hub)
+central repository (all the repository are saved) 
+dockerhub :::: it contains images 
+hypervisor-based vs container-based virtualisation
+resource and performance vise docker is excellent 
+pre-virtualisation world
+docker version 
+docker info : information about docker 
+container hyper v check the checkboxes enable them 
+install docker (windows 10 pro ) lower version thaan this needs to install docker toolkit
+
+play with docker (labs) if we dont want to install anything
+docker is a platform ecosystem around creating and running containers
+
+docker run hello-world : image name after run (there  will be a container and also pulled the image form hub.docker.com)
+docker pull hello-world : there wont be any container as such 
+images nerver run, containers run
+list all running container:
+docker container ls : lists down all the running container
+
+docker container ls --all ___> list down all the  running container as well as all the stopped container 
+
+docker container rm "name of container" ::it will remove the container with name specified
+
+docker container prune : remove all the stopped container
+
+docker container ps: container is never as a process on system
+
+docker container -p hostportno. : localportno. tomcat : address 
+docker run -p 8090:8080 --name yourtomcat tomcat
+docker container logs
+
+docker container help
+
+docker container inspect "name of the container"
+
+docker container rm -f $(docker container ls -aq)
+
+docker images prune
+
+docker image ls
+
+docker run busybox
+ 
+docker run -i -t busbox
+/# cd tmp
+/tmp # ls
+/tmp # exit 
+
+docker  run -p 8090:8080 --detach --name mytomcat tomcat  
+
+docker container logs "id or name of container"
+
+talk to a running container :
+docker container exec running instance conatiner bash
+docker container exec -it container id
+kitmetic for docker gui 
+
+hub.docker.com is a registory --> create repository 
+
+building our own images --->>>
+spring boot application-> 
+docker images
+docker pull openjdk:8
+docker images
+creating a container 
+alpine version of jdk
+
+docker container exec "the container you want to talk to"
+docker container exec -it 
+
+docker container commit  --change="CMD ['java','-jar','tmp/hello-world.jar']"  515c179495f5  hello-world:v2
+docker push hello-world:v2
+create dockerfile 
+and write FROM openjdk:8-alpine
+
+COPY target/hello-world.jar
+ CMD ["java", "-jar" ,"hello-world "] 
+
+create artifact first and then create image
+before executing docker build command you have to create artifact of the command 
+goto maven build: clean and package 
+plugins available   
+spotify maven plugin : mature 
+docker certification :success 
+DCA
+talk to running container with the help of exec command 
+
+
+
+

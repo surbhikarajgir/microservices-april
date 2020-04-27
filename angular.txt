@@ -1,0 +1,87 @@
+client will send the request to server 
+fED= angular , react , jquery 
+server node.js java .net
+angular was developed by google and react was developed by facebook
+typescript language developed by microsoft : you should know java script to understand javascript
+node.js install it 
+npm already come with node 
+angular cli npm (node package manager) intsall -g @angular/cli
+install editor 
+cli(command line interactive tool)
+flags: creating angular application using cli 
+goto folder and cmd there ng new name of application --prefix "" --skip-tests
+default prefix is app
+karma is test runner 
+if we dont do this a spec file will be generated 
+flag : --skip-installed (only folder will be created)
+e2e : end to end testing 
+node_modules : packages are install 
+package.json file : 
+npm start 
+
+npm build 
+ng serve : application will get executed on some browser 
+ng build 
+@angular/core" 9.2.3 " --exact  version
+package-lock : which version is currently being installed
+ts-lint.json : when we are using cli a file name ts-lint.json is use to configure rules
+for example : there are certain linting rules 
+tsconfig.json : typescript configuration guides the compiler for javascript 
+angular.json : build " related to the project" and test "for testing" section
+every angular application will have a module:
+this module can contain multiple component
+`one root component will be there and then other component are connected to that root 
+angular app is a set of component
+html contains design of component 
+ts->typescript
+module and component 
+import statements 
+3.export keyword Appcomponent {}
+every decorator is a method @Ngmodule({ }) every decorator prefix as @ and written as pascal case 
+for component 
+1.import statement 
+@compoenent
+export class testcomponent
+flow of application :
+main.ts : in this file they have given the name of module and it is browser based application 
+then it will go to app module 
+3.writting neccessary import statement 
+in bootstrap array we put root component
+creating a component 
+: test component 
+(to open app) ng serve --open 
+app.component ctrl+A delete
+ng generate component "name of component" --dryrun
+ng g c test --flat --dry-run
+ng g c test --inline --skip-tests
+ng g c test --flat -is -it --skip-tests inline style inslne template 
+declare the component in decorator 
+in app.module.ts
+oninit : builtin interface 
+interface have some method ngonInit(): 
+component life cycle hook method 
+services will not have life cycle hook cycle method 
+ngonInt(): void{
+console.log
+}
+test(msg:string ,num:number):void{
+console.log('test method called')
+}
+
+export class TestComponent implements onInit
+{
+title : string = 'angular fundamental'
+cwidth :number = 200
+cheight:number =100
+}
+interpolation syntax (one way binding)
+template :
+<h6 [height] = "cheight" 
+
+
+built in event
+import array 
+bootstrap array 
+export array 
+routing array
+ 
